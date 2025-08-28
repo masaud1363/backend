@@ -1,0 +1,13 @@
+# wrangler.toml
+name = "smc-backend-worker" # می‌توانید این نام را به دلخواه تغییر دهید
+main = "worker.js"
+compatibility_date = "2023-10-30"
+
+# این بخش را برای اتصال به KV اضافه کنید
+[[kv_namespaces]]
+binding = "SMC_STATE" # این نام باید با کد worker.js یکی باشد
+id = "ID_KV_NAMESPACE_خود_را_اینجا_قرار_دهید" # آی‌دی که از داشبورد کلودفلر کپی می‌کنید
+
+# این بخش را برای اجرای خودکار هر دقیقه اضافه کنید
+[triggers]
+crons = [ "*/1 * * * *" ]

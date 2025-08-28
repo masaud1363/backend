@@ -1,0 +1,12 @@
+{
+  "name": "smc-backend",
+  "version": "1.0.0",
+  "description": "Backend processor for the SMC trading bot",
+  "main": "worker.js",
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
